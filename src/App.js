@@ -3,8 +3,8 @@ import Signup from './Components/Signup'
 
 const App = () => {
   return (
-    <div>
-      <p>hello</p>
+    <div className='parent'>
+      {/* <p>hello</p> */}
       <Signup/>
     </div>
   )

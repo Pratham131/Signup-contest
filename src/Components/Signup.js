@@ -76,7 +76,7 @@ const Signup = () => {
         <p style={{ color: 'red' }}>Passwords do not match</p>
       )}
 
-      <button onClick={handleSubmit}>Submit</button>
+      <button onClick={handleSubmit} className='btn'>Submit</button>
     </div>
   );
 };
