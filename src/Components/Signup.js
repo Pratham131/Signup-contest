@@ -5,9 +5,9 @@ const Signup = () => {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
 
-  const [emailValid, setEmailValid] = useState(true);
-  const [passwordValid, setPasswordValid] = useState(true);
-  const [confirmPasswordValid, setConfirmPasswordValid] = useState(true);
+  const [emailValid, setEmailValid] = useState(false);
+  const [passwordValid, setPasswordValid] = useState(false);
+  const [confirmPasswordValid, setConfirmPasswordValid] = useState(false);
 
   const handleEmailChange = (e) => {
     const inputEmail = e.target.value;
@@ -43,40 +43,41 @@ const Signup = () => {
 
   return (
     <div className='signup'>
-      <label>Email:</label>
+      <label><b>Email:</b></label>
       <input
         type="email"
         value={email}
         onChange={handleEmailChange}
-        style={{ border: emailValid ? '1px solid green' : '1px solid red' }}
+        style={{ border: emailValid ? '2px solid green' : '2px solid red', borderRadius: "5px" }}
       />
       {!emailValid && <p style={{ color: 'red' }}>Invalid email format</p>}
 
-      <label>Password:</label>
+      <label><b>Password:</b></label>
       <input
         type="password"
         value={password}
         onChange={handlePasswordChange}
-        style={{ border: passwordValid ? '1px solid green' : '1px solid red' }}
+        style={{ border: passwordValid ? '2px solid green' : '2px solid red', borderRadius: "5px" }}
       />
       {!passwordValid && (
         <p style={{ color: 'red' }}>Password must be at least 8 characters long</p>
       )}
 
-      <label>Confirm Password:</label>
+      <label><b>Confirm Password:</b></label>
       <input
         type="password"
         value={confirmPassword}
         onChange={handleConfirmPasswordChange}
         style={{
-          border: confirmPasswordValid ? '1px solid green' : '1px solid red',
+          border: confirmPasswordValid ? '2px solid green' : '2px solid red',
+          borderRadius: "5px"
         }}
       />
       {!confirmPasswordValid && (
         <p style={{ color: 'red' }}>Passwords do not match</p>
       )}
 
-      <button onClick={handleSubmit} className='btn'>Submit</button>
+      <button onClick={handleSubmit} className='btn'>Sign Up</button>
     </div>
   );
 };
