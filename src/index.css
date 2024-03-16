@@ -18,7 +18,7 @@ code {
 }
 
 .parent{
-  margin-top: 15%;
+  margin-top: 12%;
   /* border: 1px solid red; */
   display: flex;
   justify-content: center;
@@ -26,7 +26,7 @@ code {
 
   .signup{
     /* background-color: aqua; */
-    width: 40%;
+    width: 30%;
     /* border: 1px solid green; */
     padding: 25px;
     display: flex;
